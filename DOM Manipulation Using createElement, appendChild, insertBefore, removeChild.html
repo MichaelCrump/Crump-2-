@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<title>Code Topic #1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+<header>
+	<img src="img/mobileapp.png" width="150" class="img">
+    <h1>DOM Manipulation Using createElement, appendChild, insertBefore, removeChild, etc.</h1>
+</header>
+
+<h1>The DOM</h1>
+<p>
+When a web page is loaded, the browser creates a Document Object Model of the page.  The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</br>
+The HTML DOM model is constructed as a tree of Objects:
+</p>
+
+ <img src="img/The HTML DOM Tree of Objects.gif" width="300">
+ 
+<p>
+<h1>createElement</h1>
+<p>The createElement object represents the created element node.  The syntax for this element is:<hr>
+document.createElement<i>(nodename)</i><hr>
+The following script creates a basic button element (at the bottom of the page).  The createElement() method creates an Element Node with the specified name:
+</p>
+
+<p>Click the button to make a BUTTON element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var btn = document.createElement("BUTTON");
+    document.body.appendChild(btn);
+}
+</script>
+
+<p>
+<h1>appendChild</h1>
+<p>If we wanted the button we just created to have specific text ("Submit", "Update", "Calculate", etc.), we would use the appendChild method to name it.</br>
+The following script names the button "submit".  Click the button to create a new button at the bottom of the page:
+
+<p>Click the button to make a BUTTON element with text.</p>
+
+<button onclick="myFunction()">Submit</button>
+
+<script>
+function myFunction() {
+    var btn = document.createElement("BUTTON");
+    var t = document.createTextNode(“Submit");
+    btn2.appendChild(t);
+    document.body.appendChild(btn);
+}
+</script>
+</br>
+
+<h1>insertBefore</h1>
+The insertBefore element inserts a new child node before a specified, existing, child node.</br>
+The insertBefore() method inserts a node as a child, right before an existing child, which you specify.</br>
+You can also use the insertBefore method to insert/move an existing element.  For example, if you had a list of two items:
+
+<ul>
+<li>Blue</li>
+<li>Red</li>
+</ul>
+ 
+<p>And you then wanted to add an item to the beginning of the list, you would use the insertBefore element to do so:</p>
+
+<img id="insertBefore" src="img/insertBefore.png" height="400" width="900">
+
+<p>The result will be a new list with the new element added to the beginning:</p>
+<script>
+var newItem = document.createElement("LI");
+var textnode = document.createTextNode("Yellow");
+newItem.appendChild(textnode);
+
+var list = document.getElementById("myList");
+list.insertBefore(newItem, list.childNodes[nodes0]);
+</script>
+
+<ul>
+<li>Yellow</li>
+<li>Blue</li>
+<li>Red</li>
+</ul>
+
+<h1>removeChild</h1>
+The removeChild Element removes a child node from an element.  It functions much like the insertBefore element, but instead removes a child node.
+
+<ul id="myList"><li>Coffee</li><li>Tea</li><li>Milk</li></ul>
+
+<p>Click the button to remove the first item from the list.  If you click the button again, it will remove the new first item.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+    var list = document.getElementById("myList");
+    list.removeChild(list.childNodes[0]);
+}
+</script>
+

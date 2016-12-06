@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<title>Code Topic #1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+<header>
+	<img src="img/mobileapp.png" width="150" class="img">
+    <h1>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
+</header>
+
+<h1>Loops</h1>
+<p>
+A loop executes a block of code a number of times.  There are four main types of loops:</br>
+<ul>
+    <li><b>for</b> - loops through a block of code a number of times</li>
+    <li><b>for/in</b> - loops through the properties of an object</li>
+    <li><b>while</b> - loops through a block of code while a specified condition is true</li>
+    <li><b>do/while</b> - also loops through a block of code while a specified condition is true</li>
+</ul>
+</p>
+<p>
+<b>For Loops</b></br>
+<p>The <b>for</b> loop is often the tool you will use when you want to create a loop.</p>
+<i>Syntax</i>:</br></br>
+for (statement 1; statement 2; statement 3) {</br>
+    code block to be executed</br>
+}</br>
+
+<p>Given the below script:</p>
+
+<p>var text = "";</br>
+var i;</br>
+for (i = 0; i < 5; i++) {</br>
+    text += "The number is " + i + "<br>";
+}</br>
+
+<p>The loop code will display the following:</p>
+<p id="demo"></p>
+
+<script>
+var text = "";
+var i;
+for (i = 0; i < 5; i++) {
+    text += "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</p>
+<p>
+<b>For/in Loops</b></br>
+<p>The JavaScript <b>for/in</b> statement loops through the properties of an object.</p>
+<p>Given the below script:</p>
+
+var person = {fname:"John", lname:"Doe", age:25};</br></br>
+
+var text = "";</br>
+var x;</br>
+for (x in person) {</br>
+    text += person[x];</br>
+}</br>
+
+<p>The loop code will display the following:</p>
+
+John Doe 25 
+
+<p>
+<b>While Loops</b></br>
+<p>The <b>while</b> loop loops through a block of code as long as a specified condition is true.</p>
+<i>Syntax</i>:</br></br>
+while (condition) {</br>
+    code block to be executed</br>
+}</br>
+<p>Given the below script:</p>
+while (i < 10) {</br>
+    text += "The number is " + i;</br>
+    i++;</br>
+}</br>
+
+<p>The loop code will display the following:</p>
+The number is 0</br>
+The number is 1</br>
+The number is 2</br>
+The number is 3</br>
+The number is 4</br>
+The number is 5</br>
+The number is 6</br>
+The number is 7</br>
+The number is 8</br>
+The number is 9</br>
+
+<p>The code stops at 9, because after that the variable condition for "i" becomes false.</p>
+
+<p>
+<b>Do While Loops</b></br>
+<p>The <b>do/while</b> loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+<i>Syntax</i>:</br></br>
+do {</br>
+    code block to be executed</br>
+}</br>
+while (condition);</br>
+
+<p>Given the below script:</p>
+do {</br>
+    text += "The number is " + i;</br>
+    i++;</br>
+}</br>
+while (i < 10);	</br>
+
+<p>The loop code will display the following:</p>
+
+The number is 0</br>
+The number is 1</br>
+The number is 2</br>
+The number is 3</br>
+The number is 4</br>
+The number is 5</br>
+The number is 6</br>
+The number is 7</br>
+The number is 8</br>
+The number is 9	</br>
+
+<p>Again, the code stops at 9.  The condition for the Do-while loop is to only increment the variable by 1 while "i" is less than 10.</p></br>
+
+<h1>Conditional Statements</h1>
+<p>Conditional statements are used to perform different actions based on different conditions.</p>
+Very often when you write code, you want to perform different actions for different decisions.  You can use conditional statements in your code to do this.</br>
+
+In JavaScript we have the following conditional statements:</br>
+<ul>
+    <li>Use <b>if</b> to specify a block of code to be executed, if a specified condition is true</li>
+    <li>Use <b>else</b> to specify a block of code to be executed, if the same condition is false</li>
+    <li>Use <b>else if</b> to specify a new condition to test, if the first condition is false</li>
+    <li>Use <b>switch</b> to specify many alternative blocks of code to be executed</li>
+</ul>	
+<p>
+<b>The if Statement</b></br>
+<p>Use the <b>if</b> statement to specify a block of JavaScript code to be executed if a condition is true.</p>
+<i>Syntax</i>:</br></br>
+if (condition) {</br>
+    block of code to be executed if the condition is true</br>
+} </br>
+<p>Given the below script:</p>
+if (hour < 18) {</br>
+    greeting = "Good day";</br>
+}</br>
+
+<p>The return will display the following:</p>
+Good day</br> 
+
+<p>
+<b>The else Statement</b></br>
+<p>Use the <b>else</b> statement to specify a block of code to be executed if the condition is false.</p>
+<i>Syntax</i>:</br></br>
+if (condition) {</br>
+    block of code to be executed if the condition is true</br>
+} else {</br>
+    block of code to be executed if the condition is false</br>
+}</br>
+
+<p>Given the below script, which essentially means "If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":</p>
+
+if (hour < 18) {</br>
+    greeting = "Good day";</br>
+} else {</br>
+    greeting = "Good evening";</br>
+} </br>
+
+<p>The return will display the following:</p>
+Good day</br> 
+
+<p>
+<b>The else if Statement</b></br>
+<p>Use the <b>else if</b> statement to specify a new condition if the first condition is false.</p>
+<i>Syntax</i>:</br></br>
+if (condition1) {</br>
+    block of code to be executed if condition1 is true</br>
+} else if (condition2) {</br>
+    block of code to be executed if the condition1 is false and condition2 is true</br>
+} else {</br>
+    block of code to be executed if the condition1 is false and condition2 is false</br>
+}</br>
+
+<p>Given the below script, which essentially means "If time is less than 10:00, create a "Good morning" greeting, if not, but time is less than 20:00, 
+create a "Good day" greeting, otherwise a "Good evening":</p>
+
+if (time < 10) {</br>
+    greeting = "Good morning";</br>
+} else if (time < 20) {</br>
+    greeting = "Good day";</br>
+} else {</br>
+    greeting = "Good evening";</br>
+} </br>
+
+<p>The return will display the following:</p>
+Good morning</br>
+
+<p>
+<b>The switch Statement</b></br>
+<p>The switch statement is used to perform different actions based on different conditions.</p>
+<i>Syntax</i>:</br></br>
+switch(expression) {</br>
+    case n:</br>
+        code block</br>
+        break;</br>
+    case n:</br>
+        code block</br>
+        break;</br>
+    default:</br>
+        default code block</br>
+} </br>
+
+<p>This is how it works:</br></br>
+
+    The switch expression is evaluated once.</br>
+    The value of the expression is compared with the values of each case.</br>
+    If there is a match, the associated block of code is executed.</br>
+
+
+<p>In the below script, the getDay() method returns the weekday as a number between 0 and 6. (Sunday=0, Monday=1, Tuesday=2 ..)</br>
+Use the weekday number to calculate weekday name:</p>
+
+switch (new Date().getDay()) {</br>
+    case 0:</br>
+        day = "Sunday";</br>
+        break;</br>
+    case 1:</br>
+        day = "Monday";</br>
+        break;</br>
+    case 2:</br>
+        day = "Tuesday";</br>
+        break;</br>
+    case 3:</br>
+        day = "Wednesday";</br>
+        break;</br>
+    case 4:</br>
+        day = "Thursday";</br>
+        break;</br>
+    case 5:</br>
+        day = "Friday";</br>
+        break;</br>
+    case 6:</br>
+        day = "Saturday";</br>
+} </br>
+
+
+<p>The result of day will be:</p>
+Friday</br></br>
+
+<h1>Functions</h1>
+<p>A JavaScript function is a block of code designed to perform a particular task.</p>
+<p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+<p>Functions are great, because you can reuse code: you define the code once, and then you can use it many times.  You can also use the same code many 
+times with different arguments, to produce different results.</p>
+
+A JavaScript function is defined with the <b>function</b> keyword, followed by a <b>name</b>, followed by parentheses <b>()</b>.</br>
+
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</br>
+
+The parentheses may include parameter names separated by commas:</br></br>
+<b>(parameter1, parameter2, ...)</b></br></br>
+
+The code to be executed by the function is placed inside curly brackets: <b>{}</b></br></br>
+function name(parameter1, parameter2, parameter3) {</br>
+    code to be executed</br>
+} </br></br>
+Function <b>parameters</b> are the <b>names</b> listed in the function definition.</br>
+
+Function <b>arguments</b> are the real <b>values</b> received by the function when it is invoked.</br>
+
+Inside the function, the arguments (the parameters) behave as local variables.</br>
+
+<p><b>Function Invocation</b></p>
+The code inside the function will execute when "something" <b>invokes</b> (calls) the function:</br>
+<ul>
+    <li>When an event occurs (when a user clicks a button)</li>
+    <li>When it is invoked (called) from JavaScript code</li>
+    <li>Automatically (self invoked)</li>
+</ul>
+<p><b>Function Return</b></p>	
+When JavaScript reaches a <b>return statement</b>, the function will stop executing.
+
+If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+
+Functions often compute a <b>return value</b>. The return value is "returned" back to the "caller".
+
+<p><b>Example</b></p>	
+Calculate the product of two numbers, and return the result:</br></br>
+var x = myFunction(4, 3);        <i>// Function is called, return value will end up in x</i></br></br>
+function myFunction(a, b) {</br>
+return a * b;                <i>// Function returns the product of a and b</i></br>
+}</br></br>
+
+The result in x will be:</br>
+12</br>
+
+<h1>Variables</h1>
+JavaScript variables are containers for storing data values.</br>
+In the below example, x, y, and z, are variables:</br></br>
+var x = 5;</br>
+var y = 6;</br>
+var z = x + y;</br></br>
+From the example above, you can expect:</br>
+<ul>
+<li>x stores the value 5</li>
+<li>y stores the value 6</li>
+<li>z stores the value 11</li>
+</ul>
+<b>JavaScript Identifiers</b></br></br>
+All JavaScript <b>variables</b> must be <b>identified</b> with <b>unique names</b>.</br></br>
+
+These unique names are called <b>identifiers</b>.</br></br>
+
+Identifiers can be short names (like x and y) or more descriptive names (age, sum, totalVolume).</br></br>
+
+The general rules for constructing names for variables (unique identifiers) are:</br>
+<ul>
+    <li>Names can contain letters, digits, underscores, and dollar signs.</li>
+    <li>Names must begin with a letter</li>
+    <li>Names can also begin with $ and _</li>
+    <li>Names are case sensitive (y and Y are different variables)</li>
+    <li>Reserved words (like JavaScript keywords) cannot be used as names</li>
+</ul>
+<b>The Assignment Operator</b></br></br>
+In JavaScript, the equal sign (=) is an "assignment" operator, not an "equal to" operator.</br></br>
+
+This is different from algebra. The following does not make sense in algebra:</br></br>
+
+x = x + 5</br></br>
+
+In JavaScript, however, it makes perfect sense: it assigns the value of x + 5 to x.</br></br>
+
+(It calculates the value of x + 5 and puts the result into x. The value of x is incremented by 5.)</br></br>
+
+<i>The "equal to" operator is written like == in JavaScript.</i></br></br>
+<b>JavaScript Data Types</b></br></br>
+JavaScript variables can hold numbers like 100 and text values like "John Doe".</br></br>
+
+In programming, text values are called text strings.</br></br>
+
+JavaScript can handle many types of data, such as numbers and strings.</br></br>
+
+Strings are written inside double or single quotes. Numbers are written without quotes.</br></br>
+
+If you put a number in quotes, it will be treated as a text string.</br></br>
+
+Example:</br></br>
+var pi = 3.14;</br>
+var person = "John Doe";</br>
+var answer = 'Yes I am!'; </br></br>
+<b>JavaScript Data Types</b></br></br>
+Creating a variable in JavaScript is called "declaring" a variable.</br></br>
+
+You declare a JavaScript variable with the <b>var</b> keyword:</br></br>
+var carName; </br></br>
+After the declaration, the variable has no value. (Technically it has the value of <b>undefined</b>)</br></br>
+
+To <b>assign</b> a value to the variable, use the equal sign:</br></br>
+carName = "Volvo";</br></br>
+
+You can also assign a value to the variable when you declare it:</br></br>
+var carName = "Volvo";</br></br>
+
+<i>It's a good programming practice to declare all variables at the beginning of a script.</i>
+
+<h1>Parameters</h1>
+Function parameters are the names listed in the function definition.</br></br>
+Function arguments are the real values passed to (and received by) the function.</br></br>
+<b>Parameter Rules</b></br></br>
+JavaScript function definitions do not specify data types for parameters.</br></br>
+
+JavaScript functions do not perform type checking on the passed arguments.</br></br>
+
+JavaScript functions do not check the number of arguments received.</br></br>
+<b>Parameter Defaults</b></br></br>
+If a function is called with <b>missing arguments</b> (less than declared), the missing values are set to: <b>undefined</b></br></br>
+
+Sometimes this is acceptable, but sometimes it is better to assign a default value to the parameter:</br></br>
+
+Example:</br></br>
+function myFunction(x, y) {</br>
+    if (y === undefined) {</br>
+          y = 0;</br>
+    }</br>
+} </br></br>
+If a function is called with <b>too many arguments</b> (more than declared), these arguments can be reached using the <b>arguments</b> object.</br></br>
+<b>The Arguments Object</b></br></br>
+JavaScript functions have a built-in object called the arguments object.</br></br>
+
+The argument object contains an array of the arguments used when the function was called (invoked).</br></br>
+
+This way you can simply use a function to find (for instance) the highest value in a list of numbers:</br></br>
+Example:</br></br>
+x = findMax(1, 123, 500, 115, 44, 88);</br></br>
+
+function findMax() {</br>
+    var i;</br>
+    var max = -Infinity;</br>
+    for (i = 0; i < arguments.length; i++) {</br>
+        if (arguments[i] > max) {</br>
+            max = arguments[i];</br>
+        }</br>
+    }</br>
+    return max;</br>
+} </br></br>
+
+<b>Arguments are Passed by Value</b></br></br>
+The parameters, in a function call, are the function's arguments.
+
+JavaScript arguments are passed by <b>value</b>: The function only gets to know the values, not the argument's locations.
+
+If a function changes an argument's value, it does not change the parameter's original value.
+
+<b>Changes to arguments are not visible (reflected) outside the function.</b>
+
+<b>Objects are Passed by Reference</b></br></br>
+In JavaScript, object references are values.
+
+Because of this, objects will behave like they are passed by <b>reference</b>:
+
+If a function changes an object property, it changes the original value.
+
+<b>Changes to object properties are visible (reflected) outside the function.</b>
+
+<h1>Arrays</h1>
+JavaScript arrays are used to store multiple values in a single variable.</br></br>
+An array is a special variable, which can hold more than one value at a time.</br></br>
+An array can hold many values under a single name, and you can access the values by referring to an index number.</br></br>
+<i>Syntax</i>:</br></br>
+var array-name = [item1, item2, ...];</br></br>
+<i>Example</i>:</br></br>
+var cars = ["Saab", "Volvo", "BMW"]; </br></br>
+You refer to an array element by referring to the <b>index number</b>.  Given the example above, the below would access the value of the first element in cars:</br></br>
+var name = cars[0];</br></br>
+[0] is the first element in an array. [1] is the second. Array indexes start with 0.</br></br>
+
+
+
+<h1>Associative Arrays</h1>
+Many programming languages support arrays with named indexes.</br></br>
+
+Arrays with named indexes are called associative arrays (or hashes).</br></br>
+
+JavaScript does <b>not</b> support arrays with named indexes.</br></br>
+
+In JavaScript, <b>arrays</b> always use <b>numbered indexes</b>.</br></br> 
+<i>Example</i>:</br></br>
+ var person = [];</br>
+person[0] = "John";</br>
+person[1] = "Doe";</br>
+person[2] = 46;</br>
+var x = person.length;         // person.length will return 3</br>
+var y = person[0];             // person[0] will return "John"</br></br>
+In JavaScript, <b>arrays</b> use <b>numbered indexes</b>. </br></br>
+In JavaScript, <b>objects</b> use <b>named indexes</b>.</br></br>
+Arrays are a special kind of objects, with numbered indexes.

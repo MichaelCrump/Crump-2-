@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>Code Topic #1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+<header>
+  <img src="img/moroni.png" width="100" class="img">
+  <h1>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+  <p>Select Reading Level</p>
+  <select class="select" id="reading-difficulty">
+    <option value="Beginner">Beginner</option>
+    <option value="Intermediate">Intermediate</option>
+    <option value="Advanced">Advanced</option>
+  </select>
+  <hr>
+  <br>
+  <p>Select a <span class="starting-point">Starting Point</span> and an <span class="ending-point">Ending Point</span>.</p>
+  <div class="end-points">
+    <div class="row">
+      <div class="col-6">
+        <label for="#start">Starting Point</label>
+        <input type="text" id="start" class="select" placeholder="1 Nephi 1:1">
+      </div> <!-- col-6 -->
+      <div class="col-6">
+        <label for="#end">Ending Point</label>
+        <input type="text" id="end" class="select" placeholder="Moroni 10:34">
+      </div> <!-- col-6 -->
+    </div> <!-- row -->
+    <br>
+    <hr>
+    <br>
+    <div class="row">
+      <div class="col-12">
+        <input class="select button" type="submit" id="btn" value="Calculate Time to Read">
+        <p id="output"></p>
+      </div> <!-- col-12 -->
+    </div> <!-- row -->
+  </div> <!-- end-point -->
+</div> <!-- container -->
+
+<footer>
+  <p class="center">This is a footer</p>
+</footer>
+
+<script src="javascript/calculate.js"></script>
+
+</body>
+</html>
+
