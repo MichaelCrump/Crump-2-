@@ -1,55 +1,164 @@
 <!DOCTYPE html>
-<html>
-<title>Code Topic #1</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
-<body>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Crump-2- by MichaelCrump</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Crump-2-</h1>
+      <h2 class="project-tagline">CIT 261 Code Topics(2)</h2>
+      <a href="https://github.com/MichaelCrump/Crump-2-" class="btn">View on GitHub</a>
+      <a href="https://github.com/MichaelCrump/Crump-2-/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MichaelCrump/Crump-2-/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-<header>
-  <img src="img/moroni.png" width="100" class="img">
-  <h1>Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays</h1>
-</header>
+    <section class="main-content">
+      <p>&lt;!DOCTYPE html&gt;
 
-<!-- Main Content -->
-<div class="container">
-  <p>Select Reading Level</p>
-  <select class="select" id="reading-difficulty">
-    <option value="Beginner">Beginner</option>
-    <option value="Intermediate">Intermediate</option>
-    <option value="Advanced">Advanced</option>
-  </select>
-  <hr>
-  <br>
-  <p>Select a <span class="starting-point">Starting Point</span> and an <span class="ending-point">Ending Point</span>.</p>
-  <div class="end-points">
-    <div class="row">
-      <div class="col-6">
-        <label for="#start">Starting Point</label>
-        <input type="text" id="start" class="select" placeholder="1 Nephi 1:1">
-      </div> <!-- col-6 -->
-      <div class="col-6">
-        <label for="#end">Ending Point</label>
-        <input type="text" id="end" class="select" placeholder="Moroni 10:34">
-      </div> <!-- col-6 -->
-    </div> <!-- row -->
-    <br>
-    <hr>
-    <br>
-    <div class="row">
-      <div class="col-12">
-        <input class="select button" type="submit" id="btn" value="Calculate Time to Read">
-        <p id="output"></p>
-      </div> <!-- col-12 -->
-    </div> <!-- row -->
-  </div> <!-- end-point -->
-</div> <!-- container -->
+</p>Code Topic #1
 
-<footer>
-  <p class="center">This is a footer</p>
-</footer>
 
-<script src="javascript/calculate.js"></script>
 
-</body>
+
+<p> 
+    <img src="img/mobileapp.png" width="150">
+    <h1>
+<a id="designing-defining-and-triggering-css3-transitions-transforms-and-animations-without-custom-libraries" class="anchor" href="#designing-defining-and-triggering-css3-transitions-transforms-and-animations-without-custom-libraries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designing, Defining, and Triggering CSS3 Transitions, Transforms, and Animations without Custom Libraries</h1>
+ </p>
+
+<h1>
+<a id="transitions" class="anchor" href="#transitions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Transitions</h1>
+
+<p>
+CSS3 transitions allows you to change property values smoothly (from one value to another), over a given duration.
+The image at the top of this page goes through a transition when you hover your mouse over it.</p>
+<p>To create a transition effect, you must specify two things:
+</p><ul>
+<li>the CSS property you want to add an effect to</li>
+<li>the duration of the effect</li>
+</ul>
+<p>If the duration part is not specified, the transition will have no effect, because the default value is 0.</p>
+
+ 
+div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+
+div:hover {
+    width: 300px;
+    height: 300px;
+}
+
+<p>Hover over the div element below to see the transition effect.</p>
+<div></div>
+
+
+<p>
+</p><h1>
+<a id="transforms" class="anchor" href="#transforms" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Transforms</h1>
+<p>A transform is much like a transition.  The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.  We can take the same transition element above (the red box) and make it transform.
+
+
+div.transform {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 2s;
+}
+
+div.transform:hover {
+    width: 300px;
+    height: 300px;
+    -webkit-transform: rotate(180deg); /* Safari */
+    transform: rotate(180deg);
+}
+
+</p><div></div>
+
+
+<p></p>
+
+<p>
+</p><h1>
+<a id="animations" class="anchor" href="#animations" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Animations</h1>
+<p>Adding animation to your website or app is a powerful way to draw users attention to important areas of your product and add interest to your interface.
+CSS animations are made up of two basic building blocks.</p>
+
+<ul>
+<li>
+<b>Keyframes</b> - define the stages and styles of the animation.</li>
+<li>
+<b>Animation Properties</b> - assign the <a href="https://github.com/keyframes" class="user-mention">@keyframes</a> to a specific CSS element and define how it is animated.</li>
+</ul>
+
+<p>The <a href="https://github.com/keyframes" class="user-mention">@keyframes</a> are added to your main CSS file.  Once the <a href="https://github.com/keyframes" class="user-mention">@keyframes</a> are defined, the animation properties must be added in order for your animation to function.</p>
+
+<p>Animation properties do two things:</p>
+
+<ul>
+<li>They assign the <a href="https://github.com/keyframes" class="user-mention">@keyframes</a> to the elements that you want to animate.</li>
+<li>They define how it is animated.</li>
+</ul>
+
+<p>The animation properties are added to the CSS selectors (or elements) that you want to animate. You must add the following two animation properties for the animation to take effect:</p>
+
+<ul>
+<li>animation-name: The name of the animation, defined in the <a href="https://github.com/keyframes" class="user-mention">@keyframes</a>.</li>
+<li>animation-duration: The duration of the animation, in seconds (e.g., 5s) or milliseconds (e.g., 200ms).</li>
+</ul>
+
+<p>The below animation has been set to change from red to yellow, to iterate 10 times, and to reverse direction each time:</p>
+
+ 
+div.animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    animation-direction: alternate; /* or: normal */
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* Standard syntax */
+<a href="https://github.com/keyframes" class="user-mention">@keyframes</a> example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+
+<div></div>
+
+<p>
+</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MichaelCrump/Crump-2-">Crump-2-</a> is maintained by <a href="https://github.com/MichaelCrump">MichaelCrump</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
 </html>
-
